@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Stomp, Roar, and Play - It's Akashaj's Big Day!</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+  <title>Stomp, Roar, and Play - It's Akshaj's Big Day!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
@@ -22,7 +22,6 @@
       overflow: hidden;
       position: relative;
     }
-
     .card {
       background: linear-gradient(135deg, rgba(240,255,240,0.95), rgba(255,250,240,0.9));
       box-shadow: 0 8px 20px rgba(85, 107, 47, 0.3);
@@ -30,30 +29,26 @@
       border-radius: 15px;
       text-align: center;
       max-width: 90%;
-      width: 320px;
+      width: 400px;
       backdrop-filter: blur(5px);
       z-index: 2;
       cursor: pointer;
       transition: transform 0.2s ease-in-out;
     }
-
     .card:hover {
       transform: scale(1.02);
     }
-
     .card h1 {
       font-size: 28px;
       margin-bottom: 15px;
       color: #2e8b57;
       font-family: 'Pangolin', cursive;
     }
-
     .card img {
-      width: 80px;
+      width: 400px;  /* Increased image size to 400px */
       height: auto;
       margin-bottom: 10px;
     }
-
     .balloon-container {
       position: absolute;
       top: 0; left: 0;
@@ -62,7 +57,6 @@
       pointer-events: none;
       z-index: 1;
     }
-
     .balloon {
       position: absolute;
       width: 180px;
@@ -71,16 +65,20 @@
       animation: float 6s ease-in-out infinite alternate;
       transform-origin: center bottom;
     }
-
     @keyframes float {
       0%, 100% { transform: translateY(0px) rotate(0deg); }
       50% { transform: translateY(-70px) rotate(8deg); }
     }
-
     @media (max-width: 768px) {
       .balloon { width: 120px; }
+      .card {
+        width: 90vw;
+      }
+      .card img {
+        width: 90vw;
+        max-width: 400px;
+      }
     }
-
     .modal-overlay {
       position: fixed;
       top: 0; left: 0;
@@ -94,12 +92,10 @@
       visibility: hidden;
       transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     }
-
     .modal-overlay.visible {
       opacity: 1;
       visibility: visible;
     }
-
     .modal-content {
       background: linear-gradient(135deg, rgba(240,255,240,0.98), rgba(255,250,240,0.95));
       border: 2px solid rgba(85,107,47,0.6);
@@ -116,38 +112,31 @@
       transform: translateY(-20px);
       transition: transform 0.3s ease-in-out;
     }
-
     .modal-overlay.visible .modal-content {
       transform: translateY(0);
     }
-
     .modal-content h2 {
       font-size: 36px;
       color: #2e8b57;
       margin-bottom: 20px;
       font-family: 'Pangolin', cursive;
     }
-
     .modal-content p {
       margin-bottom: 15px;
     }
-
     .modal-content .highlight {
       font-weight: bold;
       color: #daa520;
       font-size: 28px;
     }
-
     .modal-content p .highlight {
       font-size: 26px;
     }
-
     .modal-content .signature {
       margin-top: 25px;
       font-style: italic;
       font-size: 22px;
     }
-
     .close-button {
       position: absolute;
       top: 15px;
@@ -161,7 +150,6 @@
       border-radius: 5px;
       transition: background-color 0.2s ease-in-out;
     }
-
     .close-button:hover {
       background-color: rgba(85, 107, 47, 0.1);
     }
@@ -169,31 +157,31 @@
 </head>
 <body>
 
-  <!-- Audio element for background music -->
-  <audio id="birthdayAudio" src="happy_birthday.mp3" loop preload="auto"></audio>
+  <!-- Audio element -->
+  <audio id="birthdayAudio" src="happy-birthday.mp3" loop preload="auto"></audio>
 
   <!-- Balloon Container -->
   <div class="balloon-container" id="balloonContainer"></div>
 
   <!-- Birthday Card -->
   <div class="card" id="birthdayCard">
-    <h1>"Our Little Cub Turns 2!"</h1>
-    <img src="pic.png" alt="Birthday Image" onerror="this.onerror=null;this.src='https://placehold.co/80x80/2e8b57/ffffff?text=👶';" />
+    <h1>"Our Little Cub "Akashaj" Turns 2!"</h1>
+    <img src="pic.png" alt="Birthday Image" onerror="this.onerror=null;this.src='https://placehold.co/400x400/2e8b57/ffffff?text=👶';" />
     <p>"Let the jungle magic unfold — start the party!"</p>
   </div>
 
-  <!-- Modal Overlay -->
+  <!-- Modal -->
   <div class="modal-overlay" id="invitationModal">
     <div class="modal-content">
       <button class="close-button" id="closeModalBtn">&times;</button>
-      <h2>Roar! You're Invited!</h2>
-      <p>We are so excited to invite you to</p>
-      <p class="highlight">our little baby boy Akshaj's wild birthday party!</p>
+      <h2>Hop on the Jeep... It's Safari Time!!</h2>
+      <p>We’re setting out on Akshaj’s Birthday Safari, and it would be our pleasure to have you join us for the Akshaj Jungle Safari experience.</p>
       <p><span class="highlight">🎂 Date:</span> 16th June</p>
-      <p><span class="highlight">📍 Venue:</span> [Add venue here]</p>
-      <p>It would mean the world to us to have you there as we celebrate this special day in the jungle!</p>
-      <p>Let’s make memories, share laughter, and enjoy this joyful occasion together!</p>
-      <p class="signature">With love,<br>Akash Rai, Neha Rai</p>
+      <p><span class="highlight">📍 Venue:</span> The Ruby Hilltop - Sunny's World,</p>
+      <p>Think wild vibes, delicious food, crazy games, music, and non-stop mast!!!</p>
+      <p>The jungle's calling — and so are we! Come be part of Akshaj's Safari-style celebration with all the roars, giggles, and good times.</p>
+      <p>Get ready for a wild ride — this Safari party's gonna be unforgettable!!</p>
+      <p class="signature">With love,<br>Mumma, Papa and Didi</p>
     </div>
   </div>
 
@@ -229,7 +217,6 @@
     function openModal() {
       invitationModal.classList.add('visible');
     }
-
     function closeModal() {
       invitationModal.classList.remove('visible');
     }
@@ -238,7 +225,7 @@
       openModal();
       const audio = document.getElementById('birthdayAudio');
       audio.play().catch(error => {
-        console.log("Audio autoplay failed even after user interaction:", error);
+        console.log("Audio play failed:", error);
       });
     });
 
@@ -250,13 +237,6 @@
 
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && invitationModal.classList.contains('visible')) closeModal();
-    });
-
-    window.addEventListener('load', () => {
-      const audio = document.getElementById('birthdayAudio');
-      audio.play().catch(error => {
-        console.log("Autoplay was prevented on load:", error);
-      });
     });
   </script>
 
